@@ -7,6 +7,8 @@ function Navbar() {
       <Link to="/">Bookstore</Link>
       <div>
         <Link to="/">Books</Link>
+        <br />
+        <Link to="/categories">Categories</Link>
       </div>
     </nav>
   );
