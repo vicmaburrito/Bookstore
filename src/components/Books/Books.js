@@ -4,9 +4,10 @@ function Books() {
   return (
     <div>
       <table>
-        <tr> Book 1 &quot by &quot Author1 </tr>
+        <tr> &quot;Book&quot; 1 by &quot;Author1&quot;  </tr>
       </table>
     </div>
   );
 }
-export default Books();
+
+export default Books;
