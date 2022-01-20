@@ -1,6 +1,15 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import allActions from '../../redux/books/index';
 
-function formBook() {
+const formBook = () => {
+  const book = {
+    id, title, author, category,
+  };
+
+  const dispatch = useDispatch();
+  dispatch(allActions.books.addBook(book));
+
   return (
     <div className="d-flex justify-content-center mt-5">
       <form>
@@ -10,6 +19,6 @@ function formBook() {
       </form>
     </div>
   );
-}
+};
 
 export default formBook;
