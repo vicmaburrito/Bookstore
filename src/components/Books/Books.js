@@ -1,15 +1,10 @@
 import React from 'react';
+import AddBook from './CreateNewBook';
 
 function Books() {
   return (
     <>
-      <div className="d-flex justify-content-center mt-5">
-        <form>
-          <h2>Add a Book</h2>
-          <input className="form-control" type="text" placeholder="Write a book" />
-          <input className="form-control" type="text" placeholder="Write a Authot" />
-        </form>
-      </div>
+      <AddBook />
       <div className="d-flex justify-content-center mt-5">
         <table>
           <tr>

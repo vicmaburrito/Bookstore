@@ -1,6 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 # Bookstore
 
+This project will lay foundations for Bookstore website. App created with React and Redux. Created structure files using the "feature folder" approach. Also, was set up routing using React Router.
 
 ## Built With
 
