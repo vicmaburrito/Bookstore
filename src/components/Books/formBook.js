@@ -25,8 +25,8 @@ const FormBook = () => {
     <div className="d-flex justify-content-center mt-5">
       <form className="d-flex flex-column my-5" onSubmit={submitBookToStore}>
         <h2>Add a Book</h2>
-        <input className="my-2 inp-st" type="text" placeholder="Write a book" />
-        <input className="my-2 inp-st" type="text" placeholder="Write a Author" />
+        <input className="my-2 inp-st" type="text" placeholder="Write a book" onChange={(e) => setTitle(e.target.value)} value={title} />
+        <input className="my-2 inp-st" type="text" placeholder="Write a Author" onChange={(e) => setAuthor(e.target.value)} value={author} />
         <input type="submit" className="btn-form align-self-end" value="Submit" />
       </form>
     </div>
