@@ -1,3 +1,5 @@
+import { URL } from '../Api';
+
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const GET_BOOKS = 'bookStore/books/GET_BOOKS';
@@ -9,7 +11,20 @@ export const addBook = (payload) => ({
   payload,
 });
 
-export const getBoks = (payload) => ({
+export const PostToApi = (payload) => async (dispatch) => {
+  const response = await fetch(URL, {
+    method: 'POST',
+    body: JSON.stringify(payload),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  if (response.ok) {
+    dispatch(addBook(payload));
+  }
+};
+
+export const getBooks = (payload) => ({
   type: GET_BOOKS,
   payload,
 });
