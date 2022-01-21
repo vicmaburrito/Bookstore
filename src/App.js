@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
-import Books from './components/Books/Books';
+import Home from './components/Home/Home';
 import 'bootstrap/dist/css/bootstrap.css';
 import Categories from './components/Categories/Categories';
 
@@ -16,7 +16,7 @@ class App extends React.Component {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Books />} />
+          <Route path="/" element={<Home />} />
           <Route path="/categories" element={<Categories />} />
         </Routes>
       </BrowserRouter>
