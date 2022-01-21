@@ -29,10 +29,24 @@ export const getBooks = (payload) => ({
   payload,
 });
 
-export const removeBook = (payload) => ({
+export const removeBook = (id) => ({
   type: REMOVE_BOOK,
-  payload,
+  payload: id,
 });
+
+export const DeleteApi = (id) => async (dispatch) => {
+  const response = await fetch(`${URL}/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+    },
+  });
+
+  if (response.ok) {
+    dispatch(removeBook(id));
+  }
+};
 
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
