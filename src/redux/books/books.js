@@ -34,7 +34,7 @@ export const removeBook = (id) => ({
   payload: id,
 });
 
-export const DeleteApi = (id) => async (dispatch) => {
+export const DeleteBookApi = (id) => async (dispatch) => {
   const response = await fetch(`${URL}/${id}`, {
     method: 'DELETE',
     headers: {
