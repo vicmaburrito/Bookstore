@@ -48,12 +48,25 @@ export const DeleteApi = (id) => async (dispatch) => {
   }
 };
 
+export const listBooks = async () => {
+  const response = await fetch(URL);
+  const books = await response.json();
+  const newBooks = Object.keys(books).map((key) => ({
+    ...books[key][0],
+    item_id: key,
+  }));
+
+  return Object.values(newBooks);
+};
+
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
+    case GET_BOOKS:
+      return action.payload;
     case ADD_BOOK:
       return [...state, action.payload];
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.payload);
+      return state.filter((book) => book.item_id !== action.payload);
     default:
       return state;
   }
