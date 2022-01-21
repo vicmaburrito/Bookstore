@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import allActions from '../../redux/books/index';
 
 const formBook = () => {
+  const [title, setTitle] = useState('');
+  const [category, setCategory] = useState('');
+  const [author, setAuthor] = useState('');
+  const id = Date.now();
+
   const book = {
     id, title, author, category,
   };
 
   const dispatch = useDispatch();
-  dispatch(allActions.books.addBook(book));
+
+  dispatch(allActions.addBook(book));
+  setTitle('');
+  setCategory('');
+  setAuthor('');
 
   return (
     <div className="d-flex justify-content-center mt-5">
