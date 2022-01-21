@@ -1,15 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Button from './RemoveBtn';
 
-function AddBook() {
-  return (
-    <div className="d-flex justify-content-center mt-5">
-      <form>
-        <h2>Add a Book</h2>
-        <input className="form-control" type="text" placeholder="Write a book" />
-        <input className="form-control" type="text" placeholder="Write a Authot" />
-      </form>
-    </div>
-  );
-}
+const Book = ({
+  id, category, title, author,
+}) => (
+  <li className="book">
+    <p>{category}</p>
+    <h3>{title}</h3>
+    <span>{author}</span>
+    <Button id={id} />
+  </li>
+);
 
-export default AddBook;
+Book.propTypes = {
+  id: PropTypes.number.isRequired,
+  category: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+};
+
+export default Book;
