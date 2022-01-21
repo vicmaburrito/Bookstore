@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-// eslint-disable-next-line react/prop-types
 const Book = ({ category, title, author }) => (
   <li className="book">
     <p>{category}</p>
@@ -8,5 +8,11 @@ const Book = ({ category, title, author }) => (
     <span>{author}</span>
   </li>
 );
+
+Book.propTypes = {
+  category: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+};
 
 export default Book;
