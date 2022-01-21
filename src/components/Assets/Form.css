@@ -1,11 +1,15 @@
-
 .btn-scr,
 .btn-form,
-.inp-st {
+.inp-st,
+.field-select {
   border: 3px solid black;
   border-radius: 5%;
   padding: 0.2em 0.5rem;
   box-shadow: 4px 3px black;
   background: white;
   cursor: pointer;
+}
+
+.first-option {
+  color: gray;
 }

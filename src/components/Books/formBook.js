@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import allActions from '../../redux/books/index';
+import categories from './BooksCategories';
 import '../Assets/Form.css';
 
 const FormBook = () => {
@@ -26,6 +27,14 @@ const FormBook = () => {
       <form className="d-flex flex-column my-5" onSubmit={submitBookToStore}>
         <h2>Add a Book</h2>
         <input className="my-2 inp-st" type="text" placeholder="Write a book" onChange={(e) => setTitle(e.target.value)} value={title} />
+        <select className="field-select" onChange={(e) => setCategory(e.target.value)} value={category}>
+          <option>Select a Category</option>
+          {
+            categories.map((category) => (
+              <option key={category} value={category}>{category}</option>
+            ))
+            }
+        </select>
         <input className="my-2 inp-st" type="text" placeholder="Write a Author" onChange={(e) => setAuthor(e.target.value)} value={author} />
         <input type="submit" className="btn-form align-self-end" value="Submit" />
       </form>
