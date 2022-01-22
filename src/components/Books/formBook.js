@@ -36,7 +36,7 @@ const FormBook = () => {
               ))
             }
           </select>
-          <input type="submit" className="btn-submit" value="Submit" />
+          <input type="submit" className="btn-submit" value="ADD NEW BOOK" />
         </form>
       </div>
     </>
