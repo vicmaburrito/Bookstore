@@ -15,7 +15,7 @@ function Navbar() {
         <Link to="/categories" className="navbar-items text-decoration-none">Categories</Link>
       </div>
       <div className="Oval">
-        <FontAwesomeIcon icon={faUser} className="" />
+        <FontAwesomeIcon icon={faUser} className="Mask" />
       </div>
     </nav>
   );
