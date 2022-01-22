@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './RemoveBtn';
+import '../Assets/BooksPanel.css';
 
 const Book = ({
   id, category, title, author,
 }) => (
-  <li className="book">
-    <p>{category}</p>
-    <h3>{title}</h3>
+  <div className="">
+    <span className="book-category">{category}</span>
+    <span className="book-title">{title}</span>
     <span>{author}</span>
     <Button id={id} />
-  </li>
+  </div>
 );
 
 Book.propTypes = {

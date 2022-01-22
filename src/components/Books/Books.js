@@ -12,20 +12,18 @@ const Books = () => {
   }, [dispatch]);
 
   return (
-    <div className="container">
-      <ul>
-        {
-          books.map((book) => (
-            <Book
-              key={book.item_id}
-              id={book.item_id}
-              category={book.category}
-              title={book.title}
-              author={book.author}
-            />
-          ))
-        }
-      </ul>
+    <div className="panel-books">
+      {
+        books.map((book) => (
+          <Book
+            key={book.item_id}
+            id={book.item_id}
+            category={book.category}
+            title={book.title}
+            author={book.author}
+          />
+        ))
+      }
     </div>
   );
 };
