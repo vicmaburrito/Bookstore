@@ -8,6 +8,13 @@
   background-color: #fff;
 }
 
+.book-container {
+  border: solid 1px #e8e8e8;
+  margin: 0 0.063rem 0.938rem 0;
+  padding: 2rem 7.438rem 1.625rem 1.688rem;
+  border-radius: 4px;
+}
+
 .book-category {
   margin: 0 2.438rem 0 0;
   opacity: 0.5;
