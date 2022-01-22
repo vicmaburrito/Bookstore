@@ -24,22 +24,25 @@ const FormBook = () => {
     setAuthor('');
   };
   return (
-    <div className="d-flex justify-content-center mt-5">
-      <form className="d-flex flex-column my-5" onSubmit={submitBookToStore}>
-        <h2>Add a Book</h2>
-        <input className="my-2 inp-st" type="text" placeholder="Write a book" onChange={(e) => setTitle(e.target.value)} value={title} />
-        <select className="field-select" onChange={(e) => setCategory(e.target.value)} value={category}>
-          <option>Select a Category</option>
-          {
-            categories.map((category) => (
-              <option key={category} value={category}>{category}</option>
-            ))
+    <>
+      <div className="line" />
+      <div className="d-flex justify-content-center mt-5">
+        <form className="d-flex flex-column my-5" onSubmit={submitBookToStore}>
+          <h2>Add a Book</h2>
+          <input className="my-2 inp-st" type="text" placeholder="Write a book" onChange={(e) => setTitle(e.target.value)} value={title} />
+          <select className="field-select" onChange={(e) => setCategory(e.target.value)} value={category}>
+            <option>Select a Category</option>
+            {
+              categories.map((category) => (
+                <option key={category} value={category}>{category}</option>
+              ))
             }
-        </select>
-        <input className="my-2 inp-st" type="text" placeholder="Write a Author" onChange={(e) => setAuthor(e.target.value)} value={author} />
-        <input type="submit" className="btn-form align-self-end" value="Submit" />
-      </form>
-    </div>
+          </select>
+          <input className="my-2 inp-st" type="text" placeholder="Write a Author" onChange={(e) => setAuthor(e.target.value)} value={author} />
+          <input type="submit" className="btn-form align-self-end" value="Submit" />
+        </form>
+      </div>
+    </>
   );
 };
 

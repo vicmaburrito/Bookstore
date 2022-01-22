@@ -12,7 +12,7 @@ const Books = () => {
   }, [dispatch]);
 
   return (
-    <div className="panel-books">
+    <>
       {
         books.map((book) => (
           <Book
@@ -24,7 +24,7 @@ const Books = () => {
           />
         ))
       }
-    </div>
+    </>
   );
 };
 
