@@ -6,7 +6,7 @@ import '../Assets/BooksPanel.css';
 const Book = ({
   id, category, title,
 }) => (
-  <div className="">
+  <div className="book-container">
     <p className="book-category">{category}</p>
     <p className="book-title">{title}</p>
     <p className="book-author">Author Name</p>

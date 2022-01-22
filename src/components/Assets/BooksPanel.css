@@ -33,5 +33,15 @@
 
 .btn-remove {
   border: solid 1px var(--white-two);
+  padding-left: 0;
   background-color: #fff;
+  border-right: 1px solid #e8e8e8;
+  font-family: RobotoSlab, sans-serif;
+  color: #4386bf;
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.btn-remove:last-child {
+  border: none;
 }

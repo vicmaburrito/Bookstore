@@ -12,7 +12,9 @@ const Button = ({ id }) => {
 
   return (
     <div>
-      <button type="button" className="btn-remove" onClick={() => handleBookDelete(id)}>Remove</button>
+      <button type="button" className="btn-remove">Comments</button>
+      <button type="button" className="btn-remove px-4" onClick={() => handleBookDelete(id)}>Remove</button>
+      <button type="button" className="btn-remove px-4">Edit</button>
     </div>
   );
 };
