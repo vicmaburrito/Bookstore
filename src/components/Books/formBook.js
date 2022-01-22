@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import allActions from '../../redux/books/index';
@@ -11,13 +12,13 @@ const FormBook = () => {
   const [author, setAuthor] = useState('');
   const submitBookToStore = (e) => {
     e.preventDefault();
-    const id = Date.now();
+    const item_id = Date.now();
 
     const book = {
-      id, title, author, category,
+      item_id, title, author, category,
     };
 
-    dispatch(allActions.addBook(book));
+    dispatch(allActions.PostToApi(book));
     setTitle('');
     setCategory('');
     setAuthor('');
