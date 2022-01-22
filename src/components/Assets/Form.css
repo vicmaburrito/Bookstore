@@ -1,17 +1,28 @@
-.btn-scr,
-.btn-form,
-.inp-st,
-.field-select {
-  border: 3px solid black;
-  border-radius: 5%;
-  padding: 0.2em 0.5rem;
-  box-shadow: 4px 3px black;
-  background: white;
-  cursor: pointer;
+.form-container {
+  height: 10.625rem;
+  margin-inline: 4rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border: solid 1px #e8e8e8;
+  padding: 2rem 7.438rem 1.625rem 1.688rem;
+  border-radius: 4px;
 }
 
-.first-option {
-  color: gray;
+.select-category {
+  width: 17.813rem;
+  height: 2.813rem;
+  margin: 1.188rem 2.125rem 0;
+  padding: 0.375rem 0.938rem 0.563rem 1rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  color: #888;
+}
+
+select { color: #0290ff; }
+
+option {
+  color: black;
 }
 
 .line {
@@ -19,4 +30,21 @@
   height: 0.125rem;
   margin: 2.5rem 0.063rem 1.813rem 0;
   border: solid 1px #e8e8e8;
+}
+
+.form-title {
+  height: 1.5rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.input-title {
+  width: 41.5rem;
+  height: 2.813rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
 }
