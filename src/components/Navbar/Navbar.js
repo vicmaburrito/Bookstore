@@ -1,20 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../Assets/Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 function Navbar() {
   return (
     <nav className="p-2 navbar d-flex justify-content-between">
       <div className="display-4 ">
-        <Link to="/" className="text-black text-decoration-none p-3">
-          Bookstore
+        <Link to="/" className="title-navbar text-decoration-none">
+          Bookstore CMS
         </Link>
-        <FontAwesomeIcon icon={faBook} />
+        <Link to="/" className="navbar-items text-decoration-none">Books</Link>
+        <Link to="/categories" className="navbar-items text-decoration-none">Categories</Link>
       </div>
-      <div>
-        <Link to="/" className="mr-2 p-3 h5 text-black text-decoration-none">Books</Link>
-        <Link to="/categories" className="mr-2 p-3 h5 text-black text-decoration-none">Categories</Link>
+      <div className="Oval">
+        <FontAwesomeIcon icon={faUser} className="Mask" />
       </div>
     </nav>
   );
